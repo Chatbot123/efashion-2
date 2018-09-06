@@ -126,7 +126,7 @@ if($method == 'POST')
 			}
 			if($FAMILY !='0')
 			{
-				$FAMILY = " for family ";
+				$disfamily = " for family ";
 			}
 			else
 			{
@@ -134,7 +134,7 @@ if($method == 'POST')
 			}
             if($CATEGORY !='0')
 			{
-				$CATEGORY = " for category ";
+				$discategory = " for category ";
 			}
 			else
 			{
@@ -142,7 +142,7 @@ if($method == 'POST')
 			}
             if($ARTICLE !='0')
 			{
-				$ARTICLE = " for article ";
+				$disarticle = " for article ";
 			}
 			else
 			{
@@ -159,7 +159,7 @@ if($method == 'POST')
 			{      $disyear = " for year ";} else {$disyear = "";}
 			foreach ($someobj["results"] as $value) 
 			{
-				$speech .= $distext. $value["AMOUNT"].$disshop.$value["SHOP_NAME"].$discity.$value["CITY"]." in ".$value["STATE"].$disyear.$value["YR"].$disyear.$value["FAMILY"].$disyear.$value["CATEGORY"].$disyear.$value["ARTICLE"];
+				$speech .= $distext. $value["AMOUNT"].$disshop.$value["SHOP_NAME"].$discity.$value["CITY"]." in ".$value["STATE"].$disyear.$value["YR"].$disfamily.$value["FAMILY"].$discategory.$value["CATEGORY"].$disarticle.$value["ARTICLE"];
 				
 				$speech .= "\r\n";
 			 }
