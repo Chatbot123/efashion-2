@@ -176,7 +176,7 @@ if($method == 'POST')
 			
 	}
 	
-	
+	echo $FAMILY;
 	$response = new \stdClass();
     	$response->fulfillmentText = $speech;
     	$response->source = "webhook";
